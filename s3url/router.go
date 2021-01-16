@@ -6,7 +6,7 @@ import (
 
 func init() {
 	router = NewRouter()
-	router.RegistRaw("/v1/api/s3url", &S3URLHdl{})
+	router.RegistRaw("/service/s3url", &S3URLHdl{})
 }
 
 //Router is a URL router

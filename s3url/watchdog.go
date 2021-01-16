@@ -49,7 +49,6 @@ func check_s3_urls() {
 			Key:    aws.String(*item.Key),
 		})
 		urlStr, err := req.Presign(72 * time.Hour)
-
 		if err != nil {
 			log.Error("Failed to sign request:", err)
 			continue
