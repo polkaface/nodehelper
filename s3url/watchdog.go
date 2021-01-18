@@ -60,12 +60,9 @@ func check_s3_urls() {
 }
 
 func do_timer() {
-	log.Info("do_timer")
 	now := time.Now()
-	log.Info("hour:%d", now.Hour())
-	if now.Hour() == 1 {
-		check_s3_urls()
-	}
+	log.Info("do timer and hour:%d", now.Hour())
+	check_s3_urls()
 }
 
 func watchdog() {
